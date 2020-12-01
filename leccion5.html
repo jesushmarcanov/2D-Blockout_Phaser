@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamedev Phaser Worhshop - Lección 4 - Física</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/phaser.2.4.2.min.js"></script>
+</head>
+<body>
+    <script>
+        //Inicializar el FRamework Phaser
+        var game = new Phaser.Game(480, 320, Phaser.AUTO, null, { preload: preload, create: create, update: update });    
+        var ball; //Variable que guarda toda la información de la pelota     
+        //Función que se encarga de precargar los activos del juego
+        function preload(){
+            game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+            game.scale.pageAlignHorizontally = true;
+            game.scale.pageAlignVertically = true;
+            game.stage.backgroundColor = '#eee';
+            game.load.image('ball', 'img/ball.png');
+        };
+        //Función que se ejecuta una vez cuando todo está listo
+        function create() {
+            game.physics.startSystem(Phaser.Physics.ARCADE);
+            ball = game.add.sprite(50, 50, 'ball');
+            game.physics.enable(ball, Phaser.Physics.ARCADE);
+            ball.body.velocity.set(150, 150);
+        };
+        //Función que ejecuta cada fotograma
+        function update() {
+            //ball.x += 1;
+            //ball.y += 1;
+
+        };
+    </script>
+</body>
+</html>
