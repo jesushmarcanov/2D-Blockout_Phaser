@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamedev Phaser Worhshop - Lección 2 - Escalada</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/phaser.min.js"></script>
+</head>
+<body>
+    <script>
+        //Inicializar el FRamework Phaser
+        var game = new Phaser.Game(480, 320, Phaser.AUTO, null, {
+            preload: preload, create: create, update: update
+        });
+        //Función que se encarga de precargar los activos del juego
+        function preload(){
+            game.scale.scaleMode = phaser.ScaleManager.SHOW_ALL;
+            game.scale.pageAlignHorizontally = true;
+            game.scale.pageAlignVertically = true;
+            game.stage.backgroundColor = '#eee';
+        };
+        //Función que se ejecuta una vez cuano todo está listo
+        function create()
+        //Función que ejecuta cada fotograma
+        function update()
+    </script>
+</body>
+</html>
